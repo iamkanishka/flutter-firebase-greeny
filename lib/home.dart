@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sars/models/plants.dart';
+import 'package:greeny/models/plants.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 import 'tabc.dart';

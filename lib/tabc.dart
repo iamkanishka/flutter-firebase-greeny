@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sars/models/plants.dart';
+import 'package:greeny/models/plants.dart';
 
 class TabcPage extends StatefulWidget {
   @override

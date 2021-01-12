@@ -1,46 +1,13 @@
 import 'package:flutter/material.dart';
-//import 'package:http/http.dart' as http;
-import 'home.dart';
-import 'register.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-
+class RegisterPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      routes: <String, WidgetBuilder>{
-        '/home': (BuildContext context) => new HomePage(),
-        '/register': (BuildContext context) => new RegisterPage()
-      },
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: 'Kanishka Home Page'),
-    );
-  }
+  _RegisterPageState createState() => _RegisterPageState();
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class _RegisterPageState extends State<RegisterPage> {
   TextEditingController emailController = new TextEditingController();
   TextEditingController passController = new TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,42 +70,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        // FlatButton(
-                        //   color: Colors.blue,
-                        //   textColor: Colors.white,
-                        //   disabledColor: Colors.grey,
-                        //   disabledTextColor: Colors.black,
-                        //   padding: EdgeInsets.all(8.0),
-                        //   splashColor: Colors.blueAccent,
-                        //   onPressed: () {
-                        //     print(emailController.text);
-                        //     print(passController.text);
-                        //     Navigator.of(context).pushNamed('/home');
-                        //   },
-                        //   child: Text(
-                        //     "Login",
-                        //     style: TextStyle(fontSize: 15.0),
-                        //   ),
-                        // )
                         FlatButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0),
-                              side: BorderSide(color: Colors.blue)),
-                          color: Colors.white,
-                          textColor: Colors.blue,
-                          padding: EdgeInsets.all(10.0),
+                          color: Colors.blue,
+                          textColor: Colors.white,
+                          disabledColor: Colors.grey,
+                          disabledTextColor: Colors.black,
+                          padding: EdgeInsets.all(8.0),
+                          splashColor: Colors.blueAccent,
                           onPressed: () {
                             print(emailController.text);
                             print(passController.text);
-                            Navigator.of(context).pushNamed('/home');
+                            Navigator.of(context).pushNamed('/Register');
                           },
                           child: Text(
                             "Login",
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
+                            style: TextStyle(fontSize: 15.0),
                           ),
-                        ),
+                        )
                       ],
                     )
                   ],
